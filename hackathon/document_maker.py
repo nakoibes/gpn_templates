@@ -7,8 +7,8 @@ app = Flask(__name__)
 @app.route('/api/create_document', methods=["GET", "POST"])
 def func():
     data = request.json
-    if data["PreparationWell"]:
-        content = data["PreparationWell"]
+    if data["Passport"]:
+        content = data["Passport"]
         file = pdf.from_string(
             render_template("Passport.html",
                             organization=content.get("organization", "-"),
@@ -25,7 +25,19 @@ def func():
                             start_installation=content.get("start_installation", ""),
                             finish_installation=content.get("finish_installation", ""),
                             temperature=content.get("temperature", ""),
-                            precipitation=content.get("precipitation", "без осадков")
+                            precipitation=content.get("precipitation", "без осадков"),
+                            uenz=content.get("uenz", ""),
+                            well_id=content.get("well_id", ""),
+                            customer=content.get("customer", ""),
+                            field=content.get("field", ""),
+                            cdng_number=content.get("cdng_number", ""),
+                            stop_reason=content.get("stop_reason", ""),
+                            mrp=content.get("mrp", ""),
+                            start_date=content.get("start_date", ""),
+                            stop_date=content.get("stop_date", ""),
+                            #start_installation=content.get("start_installation", ""),
+                            #superior=content.get("superior", ""),
+                            #complect_responsible=content.get("complect_responsible", ""),
                             ),
             False,
             css="static/hf.css",

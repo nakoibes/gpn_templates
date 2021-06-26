@@ -1,11 +1,11 @@
 import requests
 
 # requests.post('http://localhost:5000/api/create_document', json={"mytext": {"the_title": "kek"}})
-res = requests.post('http://localhost:5000/api/create_document',
+res = requests.post('http://kolyanpie.ru:10000/api/create_document',
                     json={
-                        "PreparationWell":
+                        "Passport":
                             {
-                                "bush_number": "100 крайний",
+                                "bush_number": "99 крайний",
                                 "date": "17 марта 2020",
                                 "organization": "Квасочек",
                                 "team": "13",
