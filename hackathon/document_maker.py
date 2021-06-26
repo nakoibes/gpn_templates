@@ -35,9 +35,6 @@ def func():
                             mrp=content.get("mrp", ""),
                             start_date=content.get("start_date", ""),
                             stop_date=content.get("stop_date", ""),
-                            #start_installation=content.get("start_installation", ""),
-                            #superior=content.get("superior", ""),
-                            #complect_responsible=content.get("complect_responsible", ""),
                             ),
             False,
             css="static/hf.css",
@@ -47,4 +44,4 @@ def func():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False, host="0.0.0.0", port=10000)
