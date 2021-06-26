@@ -1,0 +1,89 @@
+    <!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+        <body>
+        <!-- Custom HTML header -->
+        <div class="header">
+            <h2>Эксплуатационный паспорт<br>электропогружной установки УЭНЦ</h2>
+            <p>Дата {{ date }}</p>
+        </div>
+        <div class="body">
+            <p>На УЭНЦ {{ uenz }} на скважину&#8470; {{ well_id }} куст &#8470; {{ bush_number}}<br>
+                Заказчик {{ customer }} Месторождение {{ field }} ЦДНГ &#8470; {{ cdng_number }}<br>
+                Причина остановки {{ stop_reason }} МРП {{ mrp }} Дата запуска {{ start_date }} Дата остановки {{ stop_date}}
+
+            </p>
+        </div>
+        <div class="header">
+            <h3>
+                1.Комплектация
+            </h3>
+        </div>
+        <div class="body">
+            <table border="1">
+                <tr>
+                <th>Наименование оборудования</th>
+                <th>Тип</th>
+                <th>Завтодской номер</th>
+                <th>Длина секции</th>
+                <th>Гр. Исп.</th>
+                <th>Класс ЭЭ</th>
+                <th>Завод изготовитель</th>
+                <th>Признак Нов/Рем</th>
+               </tr>
+                <tr>
+                    <td>Верхняя секция ЭЦН</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Средняя секция 1 ЭЦН</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <p>
+                Ответственный за комплектацию:(Ф.И.О.) {{ complect_responsible }} Подпись<br>
+                Начальник смены ЦИТС: {{ superior }} Подпись
+            </p>
+        </div>
+        <div class="header">
+            <h3>
+                2.Подготовка скважины
+            </h3>
+        </div>
+        <div class="body">
+            <p>
+                Подготовку скважины прозводит организация&ensp;{{ organization }}, бригада&#8470; {{ team }}.<br>Мастер(Ф.И.О.) {{ name }}<br>
+                Глушение:(тип жидкости) {{ fluid_type }},P {{ density }} г/см^3, V {{ volume }} м^3.<br>
+                Прочие работы: {{ other_works }}<br>
+                Мастер(Ф.И.О.) {{ name }} подпись
+            </p>
+        </div>
+        <div class="header">
+            <h3>
+                3.Монтаж УЭНЦ на скважине
+            </h3>
+        </div>
+        <div class="body">
+            Время монтажа с {{ start_installation }} до {{ finish_installation }}<br>
+            Метеоусловия: t {{ temperature }}&deg;C. Осадки(дождь,снег) {{ precipitation }}<br>
+        </div>
+        <!-- Custom HTML footer -->
+<!--        <div class="footer">-->
+<!--            Address: William Road-->
+<!--        </div>-->
+        </body>
+</html>
